@@ -10,8 +10,3 @@ export const transporter  = nodemailer.createTransport({
         pass: SMTP_PASS, 
     },
 })
-
-export const verifySMTP = async () => {
-  await transporter.verify();
-  console.log("SMTP server is ready");
-};
