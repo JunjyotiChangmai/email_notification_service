@@ -49,15 +49,18 @@ export async function sendNotification(req, res) {
         });
 
         if (error) {
+            console.log("error in sending email: ", error);
             return res.status(400).json({ error });
         }
 
+        console.log("Email send successfully");
         res.json({
             success: true,
             messageId: data.id
         });
 
     } catch (err) {
+        console.log("error in sending email: ", err.message)
         res.status(500).json({ error: err.message });
     }
 }
