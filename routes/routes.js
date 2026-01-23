@@ -1,9 +1,14 @@
 import { Router } from "express";
-import { sendEmail } from "../controller/controller.js";
+import { sendEmail, sendNotification } from "../controller/controller.js";
 
 const router = Router();
 
-router.post("/send", sendEmail);
+router.post("/sendemail", sendEmail);
+router.post("/send", sendNotification);
+
+router.get("/health", (req, res) => {
+  res.send("Email Notification Service is running");
+});
 
 export default router;
 
