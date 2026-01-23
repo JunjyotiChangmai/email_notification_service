@@ -18,6 +18,6 @@ app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
 
-transporter.verify()
-  .then(() => console.log("SMTP verified"))
-  .catch(err => console.error("SMTP error:", err.message));
+// transporter.verify()
+//   .then(() => console.log("SMTP verified"))
+//   .catch(err => console.error("SMTP error:", err.message));
